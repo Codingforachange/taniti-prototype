@@ -7,70 +7,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
-        <div class="logo">Taniti</div>
+        <div class="logo-container">
+            <img src="assets/taniti-logo.png" alt="Taniti Vacations Logo" class="logo-img">
+            <span class="logo-text">Taniti Vacations</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="lodging.html">Lodging</a></li>
                 <li><a href="restaurants.html">Restaurants</a></li>
                 <li><a href="entertainment.html">Entertainment</a></li>
-                <li><a href="transportation.html">Transport</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <h1>Welcome to Taniti!</h1>
-        <p>Your 7-day paradise awaits.</p>
-        <div class="hero-btns">
-            <a href="entertainment.html" class="btn">Explore Activities</a>
-            <a href="lodging.html" class="btn secondary">Find Lodging</a>
-        </div>
-    </section>
-
-    <section class="quick-info">
-        <div class="info-box">
-            <h3>Transport</h3>
-            <p>Buses: 5am - 11pm</p>
-        </div>
-        <div class="info-box">
-            <h3>Currency</h3>
-            <p>U.S. Dollar (USD)</p>
-        </div>
-        <div>
-            <h3>Power</h3>
-            <p>120 Volts (Standard US)</p>
-        </div>
-    </section>
-
     <main>
-        <section id="lodging">
-            <h2>Lodging</h2>
-            <p>From 4-star resorts to family-owned bed and breakfasts,Taniti offers a wide range of accommodation to fit any budget.</p>
-        </section>
-        <section id="restaurants">
-            <h2>Local Dining</h2>
-            <p>Enjoy local fish and rice at one of our ten restaurants, or explore our two supermarkets for a 24 hour convenience option.</p>
-        </section>
-        <section id="entertainment">
-            <h2>Featured Activities</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Volcano tours</h3>
-                    <p>Take the family to see the active volcano!</p>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Welcome to Taniti!</h1>
+                <p>Your 7-day paradise awaits. Discover the perfect family getaway.</p>
+                <div class="hero-btns">
+                    <a href="entertainment.html" class="btn">Explore Activities</a>
+                    <a href="lodging.html" class="btn secondary">Find Lodging</a>
                 </div>
-                <div class="card">
-                    <h3>Beaches</h3>
-                    <p>Relax on the white sandy beaches.</p>
-                </div>
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/2248587689/photo/aerial-view-of-mount-bromo-volcano-in-east-java-indonesia.jpg?s=612x612&w=0&k=20&c=rF0A1rmX00BZPBHDox2o3Wi84cZNSlnj6Lvlc7aUr8E="  alt="Active Volcano on Taniti" style="width: 100%; height: auto;">
+                <h3>Featured Activity</h3>
+                <p>Experience the majesty of Taniti's active volcano with our guided tours.</p>
+                <a href="entertainment.html" class="btn">View Tours</a>
+            </div>
+
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1311463034/photo/senegalese-food-thieboudienne-cooked-rice-and-fish-with-vegetables-close-up-in-a-dish.jpg?s=612x612&w=0&k=20&c=enNodLTHFNkiHRNrU2OHMvIBOfAsPlXsR2g3S4vDl1A=" alt="Local Fish and Rice" class="card-img">
+                <h3>Local Dining</h3>
+                <p>Enjoy fresh local fish and rice at one of our ten island restaurants.</p>
+                <a href="restaurants.html" class="btn">See Restaurants</a>
+            </div>
+
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/921504196/photo/colorful-public-transportation-bus-doing-the-round-trip-all-around-the-island-all-kind-of.jpg?s=612x612&w=0&k=20&c=x_YrD9_FApS4qn_kN-2QzPh7OuTrP9i8LRr0S2fP4yc=" alt="Taniti Public Bus" class="card-img">
+                <h3>Getting Around</h3>
+                <p>Public buses serve Taniti City from 5 a.m. to 11 p.m. daily.</p>
+                <a href="transportation.html" class="btn">Travel Info</a>
             </div>
         </section>
     </main>
 
     <footer>
+        <div class="footer-info">
+            <p><strong>Essential Traveler Info:</strong> Currency: USD | Power: 120V | Safety: High.</p>
+        </div>
         <p>&copy; 2026 Taniti Tourism Board</p>
-        <p>Safety: Violent crime is rare. Alcohol served 9am - midnight.</p>
     </footer>
 
     <script src="script.js"></script>
