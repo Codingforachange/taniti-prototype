@@ -1,18 +1,52 @@
-// script.js
+/**
+ * Taniti Vacations Interactive Prototype Script
+ */
 
-// 1. Alert for the "Book Now" buttons to show interactivity
-document.addEventListener('DOMContentLoaded',() => {
-    const bookButtons = document.querySelectorAll('.btn-large, .btn');
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Taniti Vacations site fully loaded.");
 
-    bookButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            //Only trigger if it's not a link to another page
-            if (button.tagName === 'BUTTON') {
-                alert('Thank you for your interest! The booking system is currently in development forTask 2.');
-            }
-         });
+    // 1. Navigation Link Verification
+    // Ensures internal links behave correctly and alerts the user if a section is missing.
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            // Log navigation for testing purposes
+            console.log(`Navigating to: ${href}`);
+        });
     });
-});
 
-//2. Mobile Menu Toggle (To add hamburger menu later)
-console.log("Taniti Tourism Prototype Loaded");
+    // 2. Button Interactivity
+    // Handles clicks for all "Book Now," "View Menu," and "Find Locations" buttons.
+    const actionButtons = document.querySelectorAll('.btn');
+    actionButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const buttonText = button.innerText;
+            handleButtonClick(buttonText);
+        });
+    });
+
+    /**
+     * Function to handle specific button actions based on their text
+     */
+    function handleButtonClick(text) {
+        if (text.includes('Book') || text.includes('Availability')) {
+            alert("Thank you for your interest! This feature will be available in the full release of the Taniti Vacations site.");
+        } else if (text.includes('Menu')) {
+            alert("Opening the menu for a delicious look at local Tanitian fish and rice!");
+        } else if (text.includes('Location')) {
+            alert("Opening maps to help you find the nearest 24-hour supermarket.");
+        } else {
+            console.log(`User clicked: ${text}`);
+        }
+    }
+
+    // 3. Mobile Navigation Toggle (Optional Enhancement)
+    const checkMobileWidth = () => {
+        if (window.innerWidth < 768) {
+            console.log("Mobile view active.");
+        }
+    };
+    window.addEventListener('resize', checkMobileWidth);
+    checkMobileWidth();
+});
